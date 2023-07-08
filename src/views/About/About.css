@@ -1,0 +1,117 @@
+.About{
+    min-height: 100vh;
+}
+.label{
+    margin: 3rem 3rem 3rem 3rem;
+    background: #2f1f1f5f;
+}
+
+.img{
+    height:  50%;
+    aspect-ratio: 16/9;   
+
+}
+
+
+.par{
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: .5px;
+    word-wrap: break-word;
+    font-weight: 400;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    outline: none;
+    box-sizing: border-box;
+    margin-bottom: 11px;
+}
+.detail{
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: .5px;
+    word-wrap: break-word;
+    font-weight: 400;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    outline: none;
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    display: flex;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.left{
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: .5px;
+    word-wrap: break-word;
+    font-weight: 400;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    padding-right: 0;
+}
+
+.right{
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: .5px;
+    word-wrap: break-word;
+    font-weight: 400;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 0;
+}
+
+.info-section{
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: .5px;
+    word-wrap: break-word;
+    font-weight: 400;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    outline: none;
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    box-sizing: border-box;
+}
+
+
+.skils {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 200px; /* Adjust the height as needed */
+    overflow-y: auto;
+}
+
+.skils>li {
+    flex: 0 0  20%; /* Display the list items in two columns */
+    padding: 5px;
+}
