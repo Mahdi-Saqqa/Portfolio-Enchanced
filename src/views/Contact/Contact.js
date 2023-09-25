@@ -7,10 +7,7 @@ import { useEffect } from 'react';
 
 const Contact = (props) => {
   const navigate = useNavigate();
-  const [style, setStyle] = useState({
-    backgroundColor: 'rgb(32, 33, 36)',
-    color: 'white',
-  });
+  const { style } = props;
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -69,16 +66,8 @@ const Contact = (props) => {
     }
   };
 
-  useEffect(() => {
-    if (props.dark) {
-      setStyle({ backgroundColor: 'rgb(32, 33, 36)', color: 'white' });
-    } else {
-      setStyle({ backgroundColor: 'white', color: 'black' });
-    }
-  }, [props.dark]);
-
   return (
-    <div className="container Contact" style={style}>
+    <div className="container Contact" style={style} id='contact'>
       <div className="row">
         <div className="col-8 mx-auto my-5">
           <h1>Contact Me</h1>

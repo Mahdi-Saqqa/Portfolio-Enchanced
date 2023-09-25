@@ -19,7 +19,6 @@ const Navigate = (props) => {
 
   const handleMobileNavToggle = () => {
     document.body.classList.toggle("mobile-nav-active");
-    // Toggle classes on the clicked element
     const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
   };
 
@@ -32,10 +31,13 @@ const Navigate = (props) => {
         style={mood}
       />
 
-      <nav id="navbar" className="navbar nav-menu">
+      <nav id="navbar" className=" nav-menu">
         <ul>
           <li>
-            <Link to="/" style={mood} className="nav-link scrollto">
+            <Link to="/" style={mood} className="nav-link scrollto"
+                    onClick={handleMobileNavToggle}
+
+            >
               <FontAwesomeIcon
                 icon={faHouse}
                 className="navigate__icon"
@@ -44,28 +46,38 @@ const Navigate = (props) => {
             </Link>
           </li>
           <li>
-            <Link to="/about" style={mood} className="nav-link scrollto">
+            <Link to="/about" style={mood} className="nav-link scrollto"
+                    onClick={handleMobileNavToggle}
+                    >
               <FontAwesomeIcon icon={faUser} className="navigate__icon" />{" "}
               <span >About</span>
             </Link>
           </li>
 
           <li>
-            <Link to="/portfolio" style={mood} className="nav-link scrollto">
+            <Link to="/portfolio" style={mood} className="nav-link scrollto"
+            
+            onClick={handleMobileNavToggle}
+            >
               {" "}
-              <FontAwesomeIcon icon={faPager} className="navigate__icon" />
+              <FontAwesomeIcon icon={faPager} className="navigate__icon" 
+              />
               <span >Portfolio</span>
             </Link>
           </li>
           <li>
-            <Link to="/services" style={mood} className="nav-link scrollto">
+            <Link to="/services" style={mood} className="nav-link scrollto"
+                    onClick={handleMobileNavToggle}
+                    >
               {" "}
               <FontAwesomeIcon icon={faServer} className="navigate__icon" />
               <span >Services</span>
             </Link>
           </li>
           <li>
-            <Link to="/contact" style={mood} className="nav-link scrollto">
+            <Link to="/contact" style={mood} className="nav-link scrollto"
+                    onClick={handleMobileNavToggle}
+                    >
               {" "}
               <FontAwesomeIcon
                 icon={faEnvelope}
@@ -74,7 +86,9 @@ const Navigate = (props) => {
               <span >Contact</span>
             </Link>
           </li>
-          <Mood mood={mood}  setMood={setMood} dark={dark} setDark={setDark} />
+          <Mood mood={mood}  setMood={setMood} dark={dark} setDark={setDark} 
+                  onClick={handleMobileNavToggle}
+                  />
         </ul>
       </nav>
     </header>

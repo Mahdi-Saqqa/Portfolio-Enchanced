@@ -11,32 +11,37 @@ import Services from './views/Services/Services';
 
 
 function App() {
-  const [mood, setMood] = useState({ color: "#45505b", backgroundColor: "#f2f3f5" });
-  const [dark , setDark] = useState(false);
-  const [style, setStyle] = useState({
-    backgroundColor: 'rgb(32, 33, 36)',
-    color: 'white',
-  });
+  const [dark , setDark] = useState(
+    () => {
+      const isDark = JSON.parse(sessionStorage.getItem("dark"));
+      if (isDark == null || isDark == true) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  );
+  const [style, setStyle] = useState({ backgroundColor: '#001D3D', color: '#edf2fb' });
 
   useEffect(() => {
     if (dark) {
-      setStyle({ backgroundColor: 'rgb(32, 33, 36)', color: 'white' });
+      setStyle({ backgroundColor: '#001D3D', color: '#edf2fb' });
     } else {
-      setStyle({ backgroundColor: 'white', color: 'black' });
+      setStyle({ backgroundColor: '#edf2fb', color: '#001D3D' });
     }
   }, [dark]);
   return (
     <div className="App" style={style}>
-      <Navigate mood={mood} setMood={setMood} dark={dark} setDark={setDark}/>
+      <Navigate dark={dark} setDark={setDark}/>
       <Routes>
-        <Route path="/" element={<Home dark={dark} setDark={setDark} />} />
-        <Route path="/home" element={<Home dark={dark} setDark={setDark} />} />
-        <Route path="/about" element={<About mood={style} dark={dark} setDark={setDark} />} />
-        <Route path="/contact" element={<Contact dark={dark} setDark={setDark} />} />
-        <Route path="/success" element={<Success dark={dark} setDark={setDark}  />} />
-        <Route path="/portfolio" element={<Portfolio mood={style} dark={dark} setDark={setDark} />} />
-        <Route path="/services" element={<Services dark={dark} setDark={setDark} />} />
-        <Route path="*" element={<Home dark={dark} setDark={setDark} />} />
+        <Route path="/" element={      <Home style={style} />} />
+        <Route path="/success" element={<Success style={style} />} />
+        <Route path="*" element={<Home style={style} />} />
+        <Route path="/about" element={<About style={style} />} />
+        <Route path="/portfolio" element={<Portfolio style={style} />} />
+        <Route path="/services" element={<Services style={style} />} />
+        <Route path="/contact" element={<Contact style={style} />} />
+
       </Routes>
     </div>
   );

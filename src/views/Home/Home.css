@@ -1,3 +1,10 @@
 .Home{
-    height: 102vh;
+    height: 100vh;
+}
+
+.linksicons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }

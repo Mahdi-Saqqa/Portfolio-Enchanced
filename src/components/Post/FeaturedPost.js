@@ -9,20 +9,19 @@ import CardMedia from '@mui/material/CardMedia';
 import { useState, useEffect } from 'react';
 
 function FeaturedPost(props) {
-  const { post,dark } = props;
-  const [mood, setMood] = useState({ color: "#45505b", backgroundColor: "#f2f3f5" });
-  useEffect(() => {
-    if (!dark) {
-        setMood({ backgroundColor: 'rgb(32, 33, 36)', color: 'white' });
-    } else {
-        setMood({ backgroundColor: 'white', color: 'black' });
-    }
-  }, [dark]);
+  const { post } = props;
+
 
   return (
-    <Grid item xs={12}  sx={{ height: '100%' }} md={6} style={mood}>
+    <Grid item xs={12}  sx={{ height: '100%' }} md={6} >
       <CardActionArea  sx={{ height: '100%' }}  component="a" href={post.url} target='_blank' >
-        <Card sx={{ display: 'flex',height: '100%' }}    style={mood}>
+        <Card sx={{ display: 'flex',height: '100%' }}    >
+        <CardMedia
+            component="img"
+            sx={{ width: 160, display: { xs: 'block', sm: 'block' } }}
+            image={post.image}
+            alt={post.imageLabel}
+          />
           <CardContent sx={{ flex: 1 }}>
             <Typography component="h2" variant="h5">
               {post.title}
@@ -35,12 +34,7 @@ function FeaturedPost(props) {
             </Typography>
 
           </CardContent>
-          <CardMedia
-            component="img"
-            sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
-            image={post.image}
-            alt={post.imageLabel}
-          />
+
         </Card>
       </CardActionArea>
     </Grid>

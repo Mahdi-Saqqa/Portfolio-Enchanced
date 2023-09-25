@@ -1,128 +1,116 @@
 import React from "react";
 import "./About.css";
-const About = (props) => {
-    const { mood } = props
-    return (
-        <div className="About container" style={mood}>
-            <div className="row border-bottom d-flex flex-column">
-                <h3 className="title my-5">About Me</h3>
-                <img className="img" src="https://c4.wallpaperflare.com/wallpaper/142/751/831/landscape-anime-digital-art-fantasy-art-wallpaper-preview.jpg" alt="about" />
-                <h4 className="mt-3">Mahdi Saqqa</h4>
-                <span className="my-3">Full Stack Developer</span>
-            </div>
-            <div className=" mt-4 row border-bottom ">
-                <div className="  par">
-                    I am a passionate full stack developer with a background in electrical
-                    engineering. With strong technical skills and a creative
-                    problem-solving approach, I excel at bringing ideas to life and
-                    delivering awesome projects. I am skilled in crafting beautiful and
-                    functional digital solutions that exceed expectations. I am a quick
-                    learner and thrive on challenges, constantly pushing the boundaries of
-                    what is possible in software development.
-                </div>
-                <div className=" par ">
-                    In addition to my technical expertise, I possess excellent
-                    communication and collaboration skills. I value effective
-                    communication with clients, stakeholders, and fellow developers to
-                    ensure project success. Working well in a team environment, I thrive
-                    on idea exchange and collaboration. Continuous learning is important
-                    to me, as I stay updated with industry trends and deliver innovative
-                    solutions that add value to users and businesses.
-                </div>
-                <div className="detail d-flex justify-content-evenly mt-5 pt-3 " style={mood}>
-                    <div className="left col col-5">
-                        <div className="info-section">
-                            <ul>
-                                <li>
-                                    <span>Birthday:</span>
-                                    <span>29.09.1997</span>
-                                </li>
-                                <li>
-                                    <span>Age:</span>
-                                    <span>26</span>
-                                </li>
-                                <li>
-                                    <span>Address:</span>
-                                    <span>Nablus, Palestine</span>
-                                </li>
-                                <li>
-                                    <span>Email:</span>
-                                    <span>
-                                        <a href="mailto:mahdi.saqqa@gmail.com">mahdi.saqqa@gmail.com</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>Phone:</span>
-                                    <span>
-                                        <a href="tel:+970598888041">+970598888041</a>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="right col col-5">
-                        <div className="info-section">
-                            <ul>
-                                <li>
-                                    <span>Nationality:</span>
-                                    <span>Palestinian</span>
-                                </li>
-                                <li>
-                                    <span>Study:</span>
-                                    <span>Coding Dojo</span>
-                                </li>
-                                <li>
-                                    <span>Degree:</span>
-                                    <span>BC in Electrical Engineer</span>
-                                </li>
-                                <li>
-                                    <span>Interest:</span>
-                                    <span>AI, Algorithms, Problems Solving</span>
-                                </li>
-                                <li>
-                                    <span>Freelance:</span>
-                                    <span>Available</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="row">
-                <h3 className="title mt-3">Coding Dojo Exams Result</h3>
-                <img className="my-5" src="./results.png" alt="" />
-            </div>
-            <div className="row">
-                <h3 className="title mt-3">skills</h3>
-                <ul className="skils">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>Node.js</li>
-                    <li>Express</li>
-                    <li>MongoDB</li>
-                    <li>MySQL</li>
-                    <li>Python</li>
-                    <li>Java</li>
-                    <li>C++</li>
-                    <li>Git</li>
-                    <li>GitHub</li>
-                    <li>Heroku</li>
-                    <li>Netlify</li>
-                    <li>Postman</li>
-                    <li>VS Code</li>
-                    <li>Visual Studio</li>
-                    <li>Linux</li>
-                    <li>Windows</li>
-                    <li>MacOS</li>
-                    <li>Microsoft Office</li>
-                    <li>Adobe XD</li>
-                </ul>
+import "./demo.css";
 
-                </div>
+import { Link } from "react-router-dom";
+const About = () => {
+  return (
+    <div className="About">
+      <h1>About Me</h1>
+      <div>
+        <div className="intro">
+          <p>
+            I am a passionate full stack developer with strong technical skills
+            and a creative approach to problem-solving. I excel in crafting
+            beautiful and functional digital solutions that exceed expectations.
+          </p>
+          <br/>
+        </div>
+        <div className="midle d-flex row ">
+          <div class="left  col-md-12 col-lg-6 ">
+            <div class="tokyo_section_title">
+              <h3 className="d">Education</h3>
             </div>
-            );
+            <div class="tokyo_tm_resume_list">
+              <ul >
+                <li>
+                  <div class="list_inner">
+                    <div class="time">
+                      <span>2023 - 2023</span>
+                    </div>
+                    <div class="place">
+                      <h3>AXSOS Academy</h3>
+                      <span>FSD BootCamp</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="list_inner">
+                    <div class="time">
+                      <span>2016 - 2023</span>
+                    </div>
+                    <div class="place">
+                      <h3>PTUK University</h3>
+                      <span>Bachelor Degree</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="list_inner">
+                    <div class="time">
+                      <span>2014 - 2015</span>
+                    </div>
+                    <div class="place">
+                      <h3>NIS School</h3>
+                      <span>Diploma Degree</span>
+                    </div>
+                    
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="right  col-md-12 col-lg-6">
+          <div class="tokyo_section_title">
+              <h3 className="d">Projects</h3>
+            </div>
+            <div class="tokyo_tm_resume_list">
+              <ul >
+                <li>
+                  <div class="list_inner">
+                    <div class="time">
+                      <span>April - 2023</span>
+                    </div>
+                    <div class="place">
+                        <Link to="https://github.com/Mahdi-Saqqa/podcasti-python-project"><h3>Podcasti</h3></Link>
+                      <span>Python Stack</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="list_inner">
+                    <div class="time">
+                      <span>May - 2023</span>
+                    </div>
+                    <div class="place">
+                    <Link to="https://github.com/Mahdi-Saqqa/CinePhilia"><h3>CinePhilia</h3></Link>
+                      <span>Java Stack</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="list_inner">
+                    <div class="time">
+                      <span>Jul - 2023</span>
+                    </div>
+                    <div class="place">
+                    <Link to="https://github.com/TaleenMusa/CareerHive"><h3>CareerHive</h3></Link>
+                      <span>MERN Stack</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div  className="end">
+            <p>
+            As a full-stack developer, my portfolio showcases my proficiency in both front-end and back-end technologies, including HTML, CSS, JavaScript, React, Node.js, Python, Git, and MongoDB. These skills serve as the foundation for creating dynamic web applications. Alongside these, I leverage popular code editors like VS Code and work seamlessly across operating systems such as Linux, Windows.
+            </p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-            export default About;
+export default About;

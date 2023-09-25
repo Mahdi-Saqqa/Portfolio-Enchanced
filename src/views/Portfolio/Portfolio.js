@@ -5,13 +5,12 @@ import FeaturedPost from '../../components/Post/FeaturedPost';
 const Portfolio = (props) => {
     const {mood ,dark}= props;
     const post = {
-        title: 'Portfolio',
+        title: 'Projects',
         description:
             "This is a collection of my work. I have a passion for creating and I'm always looking for new projects to work on. If you have any questions or would like to work with me, please feel free to contact me.",
-        image: 'https://source.unsplash.com/random',
+        image: 'https://www.ishir.com/wp-content/uploads/2021/06/Custom-dimensions-670x450-px-Custom-dimensions.jpeg',
         imageText: 'main image description',
         linkText: 'Continue reading…',
-        url:'',
     };
     const Cinphilia = {
         title: 'Cinephilia',
@@ -59,24 +58,19 @@ const Portfolio = (props) => {
     <div className='Portfolio col-10 mx-auto'>
                 <MainPost post={post} mood={mood} />
                 <div className="row justify-content-lg-between">
-                <div className="col mb-5 col-6">
+                <div className=" mb-5  col-lg-6 col-md-12 col-sm-12">
                     <FeaturedPost dark={dark}  mood={mood}  post={PodCasti} />
                     </div>
-                    <div className="col mb-5 col-6">
+                    <div className=" mb-5 col-lg-6 col-md-12 col-sm-12">
                     <FeaturedPost dark={dark} mood={mood}  post={Cinphilia} />
                     </div>
-
-                    <div className="col mb-5 col-6">
+                    <div className=" mb-5  col-lg-6 col-md-12 col-sm-12">
                     <FeaturedPost dark={dark}  mood={mood}  post={CareerHive} />
                     </div>
-                    <div className="col mb-5 col-6">
+                    <div className=" mb-5  col-lg-6 col-md-12 col-sm-12">
                     <FeaturedPost  dark={dark} mood={mood}  post={Gramiphy} />
                     </div>
-                    
-                    
-                </div>
-
-
+                </div>  
     </div>
   )
 }

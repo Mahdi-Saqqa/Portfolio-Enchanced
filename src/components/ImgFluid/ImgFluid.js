@@ -1,11 +1,14 @@
-import React from 'react'
-import './ImgFluid.css'
+import React from "react";
+import "./ImgFluid.css";
 
 const ImgFluid = () => {
   return (
-    <div className="image avatar_img ">
-      </div>
-  )
-}
+    <>
+      <div className="image ">
 
-export default ImgFluid
+      </div>
+    </>
+  );
+};
+
+export default ImgFluid;

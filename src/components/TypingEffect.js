@@ -40,7 +40,7 @@ useEffect(() => {
 }, [currentText, currentWordIndex, isDeleting, words]);
 
 return (
-    <p className="px-3">
+    <p className="px-3 text-center">
     <span className="typed-text">{currentText}</span>
     <span className="typed-cursor">|</span>
     </p>

@@ -28,7 +28,7 @@ const Services = (props) => {
             title: 'Mobile App Development',
 
             description: 'We build mobile apps that offer great user experience, fully functional, and secure for all platforms.',
-            image: 'https://source.unsplash.com/random?mobileappdevelopment',
+            image: 'https://source.unsplash.com/random?mobile',
             url: 'https://www.google.com'
         },
         {
@@ -49,7 +49,7 @@ const Services = (props) => {
             id: 5,
             title: 'Content Writing',
             description: 'We offer content writing services to help you rank your website on the first page of Google.',
-            image: 'https://source.unsplash.com/random?contentwriting',
+            image: 'https://source.unsplash.com/random?writing',
             url: 'https://www.google.com'
         },
 
@@ -63,7 +63,7 @@ const Services = (props) => {
         }
     ]
   return (
-    <div className='services'>
+    <div className='' id='services'>
       <Container maxWidth="sm" >
             <Typography className='pt-5'
               component="h1"
@@ -74,7 +74,7 @@ const Services = (props) => {
             >
               Services
             </Typography>
-            <Typography variant="h5" align="center" color="text.secondary" paragraph>
+            <Typography variant="h5" align="center" color="" paragraph>
             We offer a wide range of services to help you grow your business online.
             </Typography>
             <Stack
@@ -103,7 +103,7 @@ const Services = (props) => {
                       // 16:9
                       pt: '56.25%',
                     }}
-                    image="https://source.unsplash.com/random?wallpapers"
+                    image={card.image}
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
